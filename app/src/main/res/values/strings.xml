@@ -1,3 +1,13 @@
 <resources>
+
+    // activity_register.xml
     <string name="app_name">MyGameProjektSpecht</string>
+    <string name="title_register">Registrieren</string>
+    <string name="name">Name</string>
+    <string name="passwort">Passwort</string>
+    <string name="confirm_passwort">Passwort bestätigen</string>
+    <string name="btn_register">Registrieren</string>
+    <string name="btn_sign_in">Anmelden</string>
+    <string name="note">Hinter den Wortbergen leben die Blindtexte.</string>
+
 </resources>
