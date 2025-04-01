@@ -21,4 +21,10 @@
     <string name="settings">Einstellungen</string>
     <string name="about_game">Über das Spiel</string>
 
+    // activity_start_game.xml
+    <string name="coming_soon">Coming soon ...</string>
+
+    // activity_highscores.xml
+    <string name="title_highscores">Highscores</string>
+
 </resources>
