@@ -8,6 +8,17 @@
     <string name="confirm_passwort">Passwort bestätigen</string>
     <string name="btn_register">Registrieren</string>
     <string name="btn_sign_in">Anmelden</string>
-    <string name="note">Hinter den Wortbergen leben die Blindtexte.</string>
+
+    // activity_login.xml
+    <string name="login">Login</string>
+    <string name="avatar">Avatar</string>
+    <string name="note">Du hast noch keinen Account? Hier <b><u>registrieren</u></b>.</string>
+
+    // activity_main.xml
+    <string name="mygame">My Game</string>
+    <string name="start_game">Spiel starten</string>
+    <string name="highscores">Highscores</string>
+    <string name="settings">Einstellungen</string>
+    <string name="about_game">Über das Spiel</string>
 
 </resources>
