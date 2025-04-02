@@ -27,4 +27,7 @@
     // activity_highscores.xml
     <string name="title_highscores">Highscores</string>
 
+    // activity_settings.xml, activity_about_game.xml
+    <string name="user">Username</string>
+
 </resources>
