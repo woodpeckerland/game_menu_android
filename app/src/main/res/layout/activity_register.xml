@@ -7,7 +7,7 @@
     android:background="@drawable/gradient_background">
 
     <EditText
-        android:id="@+id/nameET"
+        android:id="@+id/name_reg_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toBottomOf="@+id/title_register" />
 
     <EditText
-        android:id="@+id/passwordET"
+        android:id="@+id/password_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -40,10 +40,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameET" />
+        app:layout_constraintTop_toBottomOf="@+id/name_reg_ET" />
 
     <EditText
-        android:id="@+id/password_confirmET"
+        android:id="@+id/confirm_password_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -58,10 +58,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+        app:layout_constraintTop_toBottomOf="@+id/password_ET" />
 
     <Button
-        android:id="@+id/registerBTN"
+        android:id="@+id/register_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -75,10 +75,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_confirmET" />
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password_ET" />
 
     <Button
-        android:id="@+id/loginBTN"
+        android:id="@+id/login_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -91,7 +91,7 @@
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerBTN" />
+        app:layout_constraintTop_toBottomOf="@+id/register_BTN" />
 
     <TextView
         android:id="@+id/title_register"
@@ -111,9 +111,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/loginBTN"
-        app:layout_constraintStart_toStartOf="@+id/loginBTN"
-        app:layout_constraintTop_toTopOf="@+id/loginBTN"
+        app:layout_constraintBottom_toBottomOf="@+id/login_BTN"
+        app:layout_constraintStart_toStartOf="@+id/login_BTN"
+        app:layout_constraintTop_toTopOf="@+id/login_BTN"
         app:srcCompat="@drawable/baseline_login_24" />
 
     <ImageView
@@ -121,9 +121,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/registerBTN"
-        app:layout_constraintStart_toStartOf="@+id/registerBTN"
-        app:layout_constraintTop_toTopOf="@+id/registerBTN"
+        app:layout_constraintBottom_toBottomOf="@+id/register_BTN"
+        app:layout_constraintStart_toStartOf="@+id/register_BTN"
+        app:layout_constraintTop_toTopOf="@+id/register_BTN"
         app:srcCompat="@drawable/baseline_create_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
