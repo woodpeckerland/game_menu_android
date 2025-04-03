@@ -2,13 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".LoginActivity"
     android:background="@drawable/gradient_background">
 
 
     <TextView
-        android:id="@+id/registerLI"
+        android:id="@+id/reg_LI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
@@ -16,10 +18,10 @@
         android:textColor="@color/btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginBTN2" />
+        app:layout_constraintTop_toBottomOf="@+id/login_BTN" />
 
     <Button
-        android:id="@+id/loginBTN2"
+        android:id="@+id/login_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -32,10 +34,10 @@
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordET2" />
+        app:layout_constraintTop_toBottomOf="@+id/password_ET" />
 
     <EditText
-        android:id="@+id/passwordET2"
+        android:id="@+id/password_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -99,9 +101,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/loginBTN2"
-        app:layout_constraintStart_toStartOf="@+id/loginBTN2"
-        app:layout_constraintTop_toTopOf="@+id/loginBTN2"
+        app:layout_constraintBottom_toBottomOf="@+id/login_BTN"
+        app:layout_constraintStart_toStartOf="@+id/login_BTN"
+        app:layout_constraintTop_toTopOf="@+id/login_BTN"
         app:srcCompat="@drawable/baseline_login_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

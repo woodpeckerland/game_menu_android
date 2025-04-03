@@ -9,17 +9,17 @@
     android:background="@drawable/gradient_background">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/my_game_IMG"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_marginTop="34dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_login2"
+        app:layout_constraintTop_toBottomOf="@+id/my_game_title_TV"
         app:srcCompat="@mipmap/gamer" />
 
     <Button
-        android:id="@+id/startGameBTN"
+        android:id="@+id/my_game_start_game_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -32,10 +32,10 @@
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/my_game_IMG" />
 
     <Button
-        android:id="@+id/highscoresBTN"
+        android:id="@+id/my_game_highscores_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -49,10 +49,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startGameBTN" />
+        app:layout_constraintTop_toBottomOf="@+id/my_game_start_game_BTN" />
 
     <Button
-        android:id="@+id/settingsBTN"
+        android:id="@+id/my_game_settings_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -66,10 +66,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/highscoresBTN" />
+        app:layout_constraintTop_toBottomOf="@+id/my_game_highscores_BTN" />
 
     <Button
-        android:id="@+id/aboutGameBTN"
+        android:id="@+id/my_game_about_game_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -83,10 +83,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settingsBTN" />
+        app:layout_constraintTop_toBottomOf="@+id/my_game_settings_BTN" />
 
     <TextView
-        android:id="@+id/title_login2"
+        android:id="@+id/my_game_title_TV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -103,9 +103,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/startGameBTN"
-        app:layout_constraintStart_toStartOf="@+id/startGameBTN"
-        app:layout_constraintTop_toTopOf="@+id/startGameBTN"
+        app:layout_constraintBottom_toBottomOf="@+id/my_game_start_game_BTN"
+        app:layout_constraintStart_toStartOf="@+id/my_game_start_game_BTN"
+        app:layout_constraintTop_toTopOf="@+id/my_game_start_game_BTN"
         app:srcCompat="@drawable/baseline_play_circle_outline_24" />
 
     <ImageView
@@ -113,9 +113,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/highscoresBTN"
-        app:layout_constraintStart_toStartOf="@+id/highscoresBTN"
-        app:layout_constraintTop_toTopOf="@+id/highscoresBTN"
+        app:layout_constraintBottom_toBottomOf="@+id/my_game_highscores_BTN"
+        app:layout_constraintStart_toStartOf="@+id/my_game_highscores_BTN"
+        app:layout_constraintTop_toTopOf="@+id/my_game_highscores_BTN"
         app:srcCompat="@drawable/baseline_scoreboard_24" />
 
     <ImageView
@@ -123,9 +123,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/settingsBTN"
-        app:layout_constraintStart_toStartOf="@+id/settingsBTN"
-        app:layout_constraintTop_toTopOf="@+id/settingsBTN"
+        app:layout_constraintBottom_toBottomOf="@+id/my_game_settings_BTN"
+        app:layout_constraintStart_toStartOf="@+id/my_game_settings_BTN"
+        app:layout_constraintTop_toTopOf="@+id/my_game_settings_BTN"
         app:srcCompat="@drawable/baseline_settings_24" />
 
     <ImageView
@@ -133,8 +133,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/aboutGameBTN"
-        app:layout_constraintStart_toStartOf="@+id/aboutGameBTN"
-        app:layout_constraintTop_toTopOf="@+id/aboutGameBTN"
+        app:layout_constraintBottom_toBottomOf="@+id/my_game_about_game_BTN"
+        app:layout_constraintStart_toStartOf="@+id/my_game_about_game_BTN"
+        app:layout_constraintTop_toTopOf="@+id/my_game_about_game_BTN"
         app:srcCompat="@drawable/baseline_info_outline_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
