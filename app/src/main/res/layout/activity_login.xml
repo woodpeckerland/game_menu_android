@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:id="@+id/reg_LI"
+        android:id="@+id/log_reg_LINK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
@@ -18,10 +18,10 @@
         android:textColor="@color/btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_BTN" />
+        app:layout_constraintTop_toBottomOf="@+id/log_login_BTN" />
 
     <Button
-        android:id="@+id/login_BTN"
+        android:id="@+id/log_login_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -34,10 +34,10 @@
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_ET" />
+        app:layout_constraintTop_toBottomOf="@+id/log_password_ET" />
 
     <EditText
-        android:id="@+id/password_ET"
+        android:id="@+id/log_password_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -52,10 +52,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameET2" />
+        app:layout_constraintTop_toBottomOf="@+id/log_name_ET" />
 
     <EditText
-        android:id="@+id/nameET2"
+        android:id="@+id/log_name_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -71,10 +71,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/log_login_IMG" />
 
     <TextView
-        android:id="@+id/title_login"
+        android:id="@+id/log_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -87,23 +87,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/log_login_IMG"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_login"
+        app:layout_constraintTop_toBottomOf="@+id/log_title"
         app:srcCompat="@mipmap/gamer" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/log_login_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/login_BTN"
-        app:layout_constraintStart_toStartOf="@+id/login_BTN"
-        app:layout_constraintTop_toTopOf="@+id/login_BTN"
+        app:layout_constraintBottom_toBottomOf="@+id/log_login_BTN"
+        app:layout_constraintStart_toStartOf="@+id/log_login_BTN"
+        app:layout_constraintTop_toTopOf="@+id/log_login_BTN"
         app:srcCompat="@drawable/baseline_login_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

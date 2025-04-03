@@ -9,7 +9,7 @@
     android:background="@drawable/gradient_background">
 
     <EditText
-        android:id="@+id/name_reg_ET"
+        android:id="@+id/reg_name_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/title_register" />
 
     <EditText
-        android:id="@+id/password_ET"
+        android:id="@+id/reg_password_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -42,10 +42,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_reg_ET" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_name_ET" />
 
     <EditText
-        android:id="@+id/confirm_password_ET"
+        android:id="@+id/reg_confirm_password_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -60,10 +60,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_ET" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_password_ET" />
 
     <Button
-        android:id="@+id/register_BTN"
+        android:id="@+id/reg_register_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -77,10 +77,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_password_ET" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_confirm_password_ET" />
 
     <Button
-        android:id="@+id/login_BTN"
+        android:id="@+id/reg_login_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -93,7 +93,7 @@
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_BTN" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_register_BTN" />
 
     <TextView
         android:id="@+id/title_register"
@@ -109,23 +109,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/login_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/login_BTN"
-        app:layout_constraintStart_toStartOf="@+id/login_BTN"
-        app:layout_constraintTop_toTopOf="@+id/login_BTN"
+        app:layout_constraintBottom_toBottomOf="@+id/reg_login_BTN"
+        app:layout_constraintStart_toStartOf="@+id/reg_login_BTN"
+        app:layout_constraintTop_toTopOf="@+id/reg_login_BTN"
         app:srcCompat="@drawable/baseline_login_24" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/register_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/register_BTN"
-        app:layout_constraintStart_toStartOf="@+id/register_BTN"
-        app:layout_constraintTop_toTopOf="@+id/register_BTN"
+        app:layout_constraintBottom_toBottomOf="@+id/reg_register_BTN"
+        app:layout_constraintStart_toStartOf="@+id/reg_register_BTN"
+        app:layout_constraintTop_toTopOf="@+id/reg_register_BTN"
         app:srcCompat="@drawable/baseline_create_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
