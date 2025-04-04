@@ -1,5 +1,7 @@
 package de.bfw.mygameprojektspecht;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -19,6 +21,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        SharedPreferences preferences = getSharedPreferences("myPreferences", Context.MODE_PRIVATE);
         setContentView(R.layout.activity_settings);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -27,8 +30,11 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             return insets;
         });
 
+        String user = preferences.getString("user", "Username");
+
         // TextView
         settings_user_TV = findViewById(R.id.settings_user_TV);
+        settings_user_TV.setText(user);
     }
 
     @Override

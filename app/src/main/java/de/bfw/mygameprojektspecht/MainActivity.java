@@ -1,5 +1,6 @@
 package de.bfw.mygameprojektspecht;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,10 +31,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Buttons
         my_game_start_game_BTN = findViewById(R.id.my_game_start_game_BTN);
         my_game_start_game_BTN.setOnClickListener(this);
+
         my_game_highscores_BTN = findViewById(R.id.my_game_highscores_BTN);
         my_game_highscores_BTN.setOnClickListener(this);
+
         my_game_settings_BTN = findViewById(R.id.my_game_settings_BTN);
         my_game_settings_BTN.setOnClickListener(this);
+
         my_game_about_game_BTN = findViewById(R.id.my_game_about_game_BTN);
         my_game_about_game_BTN.setOnClickListener(this);
     }
@@ -41,5 +45,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
+        // --> StartGameView
+        if (v.getId() == my_game_start_game_BTN.getId()) {
+            Intent intent = new Intent(this, StartGameActivity.class);
+            startActivity(intent);
+        }
+
+        // --> HighscoresView
+        else if (v.getId() == my_game_highscores_BTN.getId()) {
+            Intent intent = new Intent(this, HighscoresActivity.class);
+            startActivity(intent);
+        }
+
+        // --> SettingsView
+        else if (v.getId() == my_game_settings_BTN.getId()) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+        }
+
+        // --> AboutGameView
+        else if (v.getId() == my_game_about_game_BTN.getId()) {
+            Intent intent = new Intent(this, AboutGameActivity.class);
+            startActivity(intent);
+        }
     }
 }
