@@ -26,6 +26,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Buttons
+        my_game_start_game_BTN = findViewById(R.id.my_game_start_game_BTN);
+        my_game_start_game_BTN.setOnClickListener(this);
+        my_game_highscores_BTN = findViewById(R.id.my_game_highscores_BTN);
+        my_game_highscores_BTN.setOnClickListener(this);
+        my_game_settings_BTN = findViewById(R.id.my_game_settings_BTN);
+        my_game_settings_BTN.setOnClickListener(this);
+        my_game_about_game_BTN = findViewById(R.id.my_game_about_game_BTN);
+        my_game_about_game_BTN.setOnClickListener(this);
     }
 
     @Override

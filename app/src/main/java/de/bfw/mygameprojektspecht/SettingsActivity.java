@@ -26,6 +26,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // TextView
+        settings_user_TV = findViewById(R.id.settings_user_TV);
     }
 
     @Override

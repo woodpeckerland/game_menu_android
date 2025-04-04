@@ -26,6 +26,9 @@ public class AboutGameActivity extends AppCompatActivity implements View.OnClick
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // TextViews
+        about_game_user_TV = findViewById(R.id.about_game_user_TV);
     }
 
     @Override

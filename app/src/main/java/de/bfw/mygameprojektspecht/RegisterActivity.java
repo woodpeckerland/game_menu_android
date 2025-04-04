@@ -28,6 +28,17 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // EditTexts
+        reg_name_ET = findViewById(R.id.reg_name_ET);
+        reg_password_ET = findViewById(R.id.reg_password_ET);
+        reg_confirm_password_ET = findViewById(R.id.reg_confirm_password_ET);
+
+        // Buttons
+        reg_register_BTN = findViewById(R.id.reg_register_BTN);
+        reg_register_BTN.setOnClickListener(this);
+        reg_login_BTN = findViewById(R.id.reg_login_BTN);
+        reg_login_BTN.setOnClickListener(this);
     }
 
     @Override

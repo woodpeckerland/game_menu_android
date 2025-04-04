@@ -30,6 +30,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // EditTexts
+        log_name_ET = findViewById(R.id.log_name_ET);
+        log_password_ET = findViewById(R.id.log_password_ET);
+
+        // Buttons und Links
+        log_login_BTN = findViewById(R.id.log_login_BTN);
+        log_login_BTN.setOnClickListener(this);
+        log_reg_LINK = findViewById(R.id.log_reg_LINK);
+        log_reg_LINK.setOnClickListener(this);
     }
 
     @Override
