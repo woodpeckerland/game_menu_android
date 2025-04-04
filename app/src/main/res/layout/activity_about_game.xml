@@ -9,7 +9,7 @@
     android:background="@drawable/gradient_background">
 
     <TextView
-        android:id="@+id/about_game_username_TV"
+        android:id="@+id/about_game_user_TV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"

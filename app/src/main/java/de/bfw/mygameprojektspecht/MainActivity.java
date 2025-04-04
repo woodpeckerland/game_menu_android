@@ -2,6 +2,7 @@ package de.bfw.mygameprojektspecht;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +11,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    Button my_game_start_game_BTN, my_game_highscores_BTN, my_game_settings_BTN, my_game_about_game_BTN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

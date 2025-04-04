@@ -25,7 +25,7 @@
             app:srcCompat="@mipmap/gamer" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/settings_user_TV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
