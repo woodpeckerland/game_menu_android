@@ -5,13 +5,13 @@ public class MyGameUser {
     private String name;
     private String password;
     private int score;
-    private Boolean isLoggedIn;
+    private Boolean isRegistered;
 
-    public MyGameUser(String name, String password, int score, Boolean isLoggedIn) {
+    public MyGameUser(String name, String password, int score, Boolean isRegistered) {
         this.name = name;
         this.password = password;
         this.score = score;
-        this.isLoggedIn = isLoggedIn;
+        this.isRegistered = isRegistered;
     }
 
     public String getName() {
@@ -38,11 +38,11 @@ public class MyGameUser {
         this.score = score;
     }
 
-    public Boolean getLoggedIn() {
-        return isLoggedIn;
+    public Boolean getRegistered() {
+        return isRegistered;
     }
 
-    public void setLoggedIn(Boolean loggedIn) {
-        isLoggedIn = loggedIn;
+    public void setRegistered(Boolean registered) {
+        isRegistered = registered;
     }
 }

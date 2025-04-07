@@ -55,6 +55,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
             reg_login_BTN = findViewById(R.id.reg_login_BTN);
             reg_login_BTN.setOnClickListener(this);
+
+            // MyGameUser
+            String name = reg_password_ET.getText().toString();
+            String password = reg_password_ET.getText().toString();
+            MyGameUser user = new MyGameUser(name, password, 0, false);
         }
 
         else {
@@ -85,24 +90,22 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(getApplicationContext(), "Alle Felder ausfüllen", Toast.LENGTH_LONG).show();
             }
 
+            else if (Objects.equals(password, confirm_password)) {
+
+                Intent intent = new Intent(this, LoginActivity.class);
+                SharedPreferences.Editor editor = preferences.edit();
+
+                editor.putBoolean("firstRunMyEmailClient", false);
+                editor.putString("name", name);
+                editor.putString("password", password);
+                editor.putString("confirm_password", confirm_password);
+                editor.apply();
+
+                startActivity(intent);
+            }
+
             else {
-
-                if (Objects.equals(password, confirm_password)) {
-
-                    Intent intent = new Intent(this, LoginActivity.class);
-                    SharedPreferences.Editor editor = preferences.edit();
-
-                    editor.putBoolean("firstRunMyEmailClient", false);
-                    editor.putString("name", name);
-                    editor.putString("password", password);
-                    editor.putString("confirm_password", confirm_password);
-                    editor.apply();
-
-                    startActivity(intent);
-
-                } else {
-                    Toast.makeText(getApplicationContext(), "Passwörter stimmen nicht überein", Toast.LENGTH_LONG).show();
-                }
+                Toast.makeText(getApplicationContext(), "Passwörter stimmen nicht überein", Toast.LENGTH_LONG).show();
             }
         }
 

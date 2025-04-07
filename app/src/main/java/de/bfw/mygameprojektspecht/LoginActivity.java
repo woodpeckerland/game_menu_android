@@ -68,16 +68,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Toast.makeText(getApplicationContext(), "Beide Felder ausfüllen", Toast.LENGTH_LONG).show();
             }
 
-            else {
-
-                if (!name.equals(preferences.getString("name", name)) || !password.equals(preferences.getString("password", password))) {
+            else if (!name.equals(preferences.getString("name", "")) || !password.equals(preferences.getString("password", ""))) {
                     Toast.makeText(getApplicationContext(), "Benutzername oder Passwort falsch", Toast.LENGTH_LONG).show();
                 }
 
-                else {
-                    Intent intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
-                }
+            else {
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
             }
         }
 
