@@ -86,6 +86,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }
 
             else {
+
                 if (Objects.equals(password, confirm_password)) {
 
                     Intent intent = new Intent(this, LoginActivity.class);
@@ -98,6 +99,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     editor.apply();
 
                     startActivity(intent);
+
                 } else {
                     Toast.makeText(getApplicationContext(), "Passwörter stimmen nicht überein", Toast.LENGTH_LONG).show();
                 }

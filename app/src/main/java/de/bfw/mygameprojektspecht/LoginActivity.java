@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,7 +38,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         log_name_ET.setText(name);
 
         log_password_ET = findViewById(R.id.log_password_ET);
-        log_password_ET.setText(password);
 
         // Buttons und Links
         log_login_BTN = findViewById(R.id.log_login_BTN);
@@ -56,10 +56,29 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
 
+        SharedPreferences preferences = getSharedPreferences("myPreferences", Context.MODE_PRIVATE);
+
         // --> MainView
         if (v.getId() == log_login_BTN.getId()) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+
+            String name = log_name_ET.getText().toString();
+            String password = log_password_ET.getText().toString();
+
+            if (name.isBlank() || password.isBlank()) {
+                Toast.makeText(getApplicationContext(), "Beide Felder ausfüllen", Toast.LENGTH_LONG).show();
+            }
+
+            else {
+
+                if (!name.equals(preferences.getString("name", name)) || !password.equals(preferences.getString("password", password))) {
+                    Toast.makeText(getApplicationContext(), "Benutzername oder Passwort falsch", Toast.LENGTH_LONG).show();
+                }
+
+                else {
+                    Intent intent = new Intent(this, MainActivity.class);
+                    startActivity(intent);
+                }
+            }
         }
 
         // --> RegisterView
