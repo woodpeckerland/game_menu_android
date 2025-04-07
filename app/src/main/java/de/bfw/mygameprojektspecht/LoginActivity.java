@@ -29,14 +29,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         SharedPreferences preferences = getSharedPreferences("myPreferences", Context.MODE_PRIVATE);
         setContentView(R.layout.activity_login);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
         String name = preferences.getString("name", "Name");
-        String password = preferences.getString("password", "Passwort");
+        String password = preferences.getString("password", "");
 
         // EditTexts
         log_name_ET = findViewById(R.id.log_name_ET);
@@ -51,6 +45,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         log_reg_LINK = findViewById(R.id.log_reg_LINK);
         log_reg_LINK.setOnClickListener(this);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
     }
 
     @Override

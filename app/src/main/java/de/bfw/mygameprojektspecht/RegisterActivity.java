@@ -7,12 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -78,17 +81,27 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             password = reg_password_ET.getText().toString();
             confirm_password = reg_confirm_password_ET.getText().toString();
 
-            Intent intent = new Intent(this, LoginActivity.class);
+            if (name.isBlank() || password.isBlank() || confirm_password.isBlank()) {
+                Toast.makeText(getApplicationContext(), "Alle Felder ausfüllen", Toast.LENGTH_LONG).show();
+            }
 
-            SharedPreferences.Editor editor = preferences.edit();
+            else {
+                if (Objects.equals(password, confirm_password)) {
 
-            editor.putBoolean("firstRunMyEmailClient", false);
-            editor.putString("name", name);
-            editor.putString("password", password);
-            editor.putString("confirm_password", confirm_password);
-            editor.apply();
+                    Intent intent = new Intent(this, LoginActivity.class);
+                    SharedPreferences.Editor editor = preferences.edit();
 
-            startActivity(intent);
+                    editor.putBoolean("firstRunMyEmailClient", false);
+                    editor.putString("name", name);
+                    editor.putString("password", password);
+                    editor.putString("confirm_password", confirm_password);
+                    editor.apply();
+
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Passwörter stimmen nicht überein", Toast.LENGTH_LONG).show();
+                }
+            }
         }
 
         // --> LoginView ohne Registrierung

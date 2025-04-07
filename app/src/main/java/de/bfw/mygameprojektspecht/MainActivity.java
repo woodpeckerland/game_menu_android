@@ -22,12 +22,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
         // Buttons
         my_game_start_game_BTN = findViewById(R.id.my_game_start_game_BTN);
         my_game_start_game_BTN.setOnClickListener(this);
@@ -40,6 +34,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         my_game_about_game_BTN = findViewById(R.id.my_game_about_game_BTN);
         my_game_about_game_BTN.setOnClickListener(this);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
     }
 
     @Override

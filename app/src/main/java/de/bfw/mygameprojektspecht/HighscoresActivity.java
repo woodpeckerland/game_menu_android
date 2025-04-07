@@ -1,7 +1,6 @@
 package de.bfw.mygameprojektspecht;
 
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class HighscoresActivity extends AppCompatActivity implements View.OnClickListener {
+public class HighscoresActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +22,5 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
-
-    @Override
-    public void onClick(View v) {
-
     }
 }
