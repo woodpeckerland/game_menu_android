@@ -59,7 +59,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             // MyGameUser
             String name = reg_password_ET.getText().toString();
             String password = reg_password_ET.getText().toString();
-            MyGameUser user = new MyGameUser(name, password, 0, false);
+            MyGameUser user = new MyGameUser(name, password, 1, 0, false);
         }
 
         else {

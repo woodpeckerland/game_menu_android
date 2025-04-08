@@ -9,7 +9,7 @@
     android:background="@drawable/gradient_background">
 
     <Button
-        android:id="@+id/my_game_start_game_BTN2"
+        android:id="@+id/highscores_start_game_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -26,13 +26,14 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <ImageView
+        android:contentDescription="@string/spielen"
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/my_game_start_game_BTN2"
-        app:layout_constraintStart_toStartOf="@+id/my_game_start_game_BTN2"
-        app:layout_constraintTop_toTopOf="@+id/my_game_start_game_BTN2"
+        app:layout_constraintBottom_toBottomOf="@+id/highscores_start_game_BTN"
+        app:layout_constraintStart_toStartOf="@+id/highscores_start_game_BTN"
+        app:layout_constraintTop_toTopOf="@+id/highscores_start_game_BTN"
         app:srcCompat="@drawable/baseline_play_circle_outline_24" />
 
     <TextView
@@ -72,10 +73,11 @@
                 android:padding="12dp">
 
                 <TextView
+                    android:id="@+id/firstPlace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="1"
+                    android:text="@string/_1"
                     android:textColor="@color/btn"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -84,7 +86,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="Dennis"
+                    android:text="@string/userFirst"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -92,16 +94,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="Level 10"
+                    android:text="@string/levelFirst"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="123 Pkte."
+                    android:text="@string/scoreFirst"
                     android:textSize="16sp" />
 
                 <ImageView
+                    android:contentDescription="@string/sieger"
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -118,10 +121,11 @@
                 android:padding="12dp">
 
                 <TextView
+                    android:id="@+id/secondPlace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="2"
+                    android:text="@string/_2"
                     android:textColor="@color/btn"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -130,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="Antonia"
+                    android:text="@string/userSecond"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -138,13 +142,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="Level 9"
+                    android:text="@string/levelSecond"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="112 Pkte."
+                    android:text="@string/scoreSecond"
                     android:textSize="16sp" />
 
             </TableRow>
@@ -157,10 +161,11 @@
                 android:padding="12dp">
 
                 <TextView
+                    android:id="@+id/thirdPlace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="3"
+                    android:text="@string/_3"
                     android:textColor="@color/btn"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -169,7 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="Lino"
+                    android:text="@string/userThird"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -177,13 +182,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="Level 9"
+                    android:text="@string/levelThird"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="107 Pkte."
+                    android:text="@string/scoreThird"
                     android:textSize="16sp" />
 
             </TableRow>
@@ -196,10 +201,11 @@
                 android:padding="12dp">
 
                 <TextView
+                    android:id="@+id/fourthPlace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="4"
+                    android:text="@string/_4"
                     android:textColor="@color/btn"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -208,7 +214,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="Brian"
+                    android:text="@string/userFourth"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -216,13 +222,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="Level 7"
+                    android:text="@string/levelFourth"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="86 Pkte."
+                    android:text="@string/scoreFourth"
                     android:textSize="16sp" />
 
             </TableRow>
@@ -234,10 +240,11 @@
                 android:padding="12dp">
 
                 <TextView
+                    android:id="@+id/fifthPlace"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="5"
+                    android:text="@string/_5"
                     android:textColor="@color/btn"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -246,7 +253,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"
-                    android:text="Maik"
+                    android:text="@string/userFifth"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -254,13 +261,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="12dp"
-                    android:text="Level 2"
+                    android:text="@string/levelFifth"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="54 Pkte."
+                    android:text="@string/scoreFifth"
                     android:textSize="16sp" />
 
             </TableRow>

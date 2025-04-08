@@ -29,5 +29,27 @@
 
     // activity_settings.xml, activity_about_game.xml
     <string name="user">Username</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="userFirst">Dennis</string>
+    <string name="userSecond">Antonia</string>
+    <string name="userThird">Lino</string>
+    <string name="userFourth">Brian</string>
+    <string name="userFifth">Maik</string>
+    <string name="levelFirst">Level 10</string>
+    <string name="scoreFirst">123 Pkte.</string>
+    <string name="levelSecond">Level 9</string>
+    <string name="scoreSecond">112 Pkte.</string>
+    <string name="levelThird">Level 9</string>
+    <string name="scoreThird">107 Pkte.</string>
+    <string name="levelFourth">Level 7</string>
+    <string name="scoreFourth">86 Pkte.</string>
+    <string name="levelFifth">Level 2</string>
+    <string name="scoreFifth">54 Pkte.</string>
+    <string name="spielen">Spielen</string>
+    <string name="sieger">Sieger</string>
 
 </resources>
