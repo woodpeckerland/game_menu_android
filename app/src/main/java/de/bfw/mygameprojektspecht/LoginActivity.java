@@ -31,7 +31,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         String name = preferences.getString("name", "Name");
-        String password = preferences.getString("password", "");
 
         // EditTexts
         log_name_ET = findViewById(R.id.log_name_ET);
