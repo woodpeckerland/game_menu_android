@@ -27,7 +27,7 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_highscores);
 
         TableLayout tableLayout = findViewById(R.id.highscores_table);
-        int btnColor = getResources().getColor(R.color.btn); // Holt die Farbe blueee aus colors.xml
+        int btnColor = getResources().getColor(R.color.btn);
 
         for (int i = 0; i < 5; i++) {
             TableRow tableRow = new TableRow(this);
