@@ -1,9 +1,13 @@
 package de.bfw.mygameprojektspecht;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +26,40 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_highscores);
 
+        TableLayout tableLayout = findViewById(R.id.highscores_table);
+        int btnColor = getResources().getColor(R.color.btn); // Holt die Farbe blueee aus colors.xml
+
+        for (int i = 0; i < 5; i++) {
+            TableRow tableRow = new TableRow(this);
+            tableRow.setBackgroundResource(R.drawable.text_background);
+            tableRow.setPadding(30, 30, 30, 30);
+
+            TableLayout.LayoutParams params = new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT);
+            params.setMargins(0, 0, 0, 48);
+            tableRow.setLayoutParams(params);
+
+            for (int j = 0; j < 4; j++) {
+                TextView textView = new TextView(this);
+                textView.setText("Wert");
+                textView.setTextSize(16);
+
+                if (j == 0) {
+                    textView.setTypeface(null, Typeface.BOLD);
+                    textView.setTextColor(btnColor);
+                }
+
+                if (j == 1) {
+                    textView.setTypeface(null, Typeface.BOLD);
+                }
+
+                TableRow.LayoutParams textParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
+                textParams.setMargins(0, 0, 54, 0);
+                textView.setLayoutParams(textParams);
+                tableRow.addView(textView);
+            }
+            tableLayout.addView(tableRow);
+        }
+
         // Buttons
         highscores_start_game_BTN = findViewById(R.id.highscores_start_game_BTN);
         highscores_start_game_BTN.setOnClickListener(this);
@@ -32,6 +70,8 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
             return insets;
         });
     }
+
+
 
     @Override
     public void onClick(View v) {
