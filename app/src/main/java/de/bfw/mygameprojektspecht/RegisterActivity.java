@@ -27,7 +27,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private String name, password, confirm_password;
     boolean first_run;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText log_name_ET, log_password_ET;
     Button log_login_BTN;
     TextView log_reg_LINK;
+    boolean first_run;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +44,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         // Passworteingabe
         log_password_ET = findViewById(R.id.log_password_ET);
 
-        // Button und Link:
-        // --> LoginView
+        // Button: --> LoginView
         log_login_BTN = findViewById(R.id.log_login_BTN);
         log_login_BTN.setOnClickListener(this);
 
-        // --> RegisterView
+        // Link: --> RegisterView
         log_reg_LINK = findViewById(R.id.log_reg_LINK);
         log_reg_LINK.setOnClickListener(this);
 
@@ -63,6 +63,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
 
         SharedPreferences preferences = getSharedPreferences("myPreferences", Context.MODE_PRIVATE);
+
+        this.first_run = preferences.getBoolean("firstRunMyEmailClient", true);
 
         // --> MainView
         if (v.getId() == log_login_BTN.getId()) {
@@ -88,8 +90,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         // --> RegisterView
         else if (v.getId() == log_reg_LINK.getId()) {
-            Intent intent = new Intent(this, RegisterActivity.class);
-            startActivity(intent);
+
+            if (!first_run) {
+                Toast.makeText(getApplicationContext(), "Benutzer ist bereits registriert", Toast.LENGTH_LONG).show();
+            }
+
+            else {
+                Intent intent = new Intent(this, RegisterActivity.class);
+                startActivity(intent);
+            }
         }
     }
 }
