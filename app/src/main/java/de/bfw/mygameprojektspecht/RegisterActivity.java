@@ -17,6 +17,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Objects;
 
+/**
+ * zeigt ein Formular zur Registrierung des Users an
+ */
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText reg_name_ET, reg_password_ET, reg_confirm_password_ET;
@@ -39,20 +42,25 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
             name = preferences.getString("name", "Name");
 
-            // EditTexts
+            // EditTexts:
+            // Name
             reg_name_ET = findViewById(R.id.reg_name_ET);
             reg_name_ET.setText(name);
 
+            // Passwort
             reg_password_ET = findViewById(R.id.reg_password_ET);
             reg_password_ET.setText(password);
 
+            // Passwortbestätigung
             reg_confirm_password_ET = findViewById(R.id.reg_confirm_password_ET);
             reg_confirm_password_ET.setText(confirm_password);
 
-            // Buttons
+            // Buttons:
+            // --> Registrierung abschließen
             reg_register_BTN = findViewById(R.id.reg_register_BTN);
             reg_register_BTN.setOnClickListener(this);
 
+            // --> Login
             reg_login_BTN = findViewById(R.id.reg_login_BTN);
             reg_login_BTN.setOnClickListener(this);
 
@@ -86,6 +94,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             password = reg_password_ET.getText().toString();
             confirm_password = reg_confirm_password_ET.getText().toString();
 
+            // Fehlermeldung: leeres Feld
             if (name.isBlank() || password.isBlank() || confirm_password.isBlank()) {
                 Toast.makeText(getApplicationContext(), "Alle Felder ausfüllen", Toast.LENGTH_LONG).show();
             }
@@ -104,6 +113,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(intent);
             }
 
+            // Fehlermeldung: Eingabefehler bei der Passwortbestätigung
             else {
                 Toast.makeText(getApplicationContext(), "Passwörter stimmen nicht überein", Toast.LENGTH_LONG).show();
             }

@@ -1,5 +1,8 @@
 package de.bfw.mygameprojektspecht;
 
+/**
+ * zeigt in Zukunft einen kurzen Steckbrief des Users an
+ */
 public class MyGameUser {
 
     private String name;

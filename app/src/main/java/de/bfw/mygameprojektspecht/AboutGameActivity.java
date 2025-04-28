@@ -11,6 +11,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * soll eine kurze Übersicht über das Spiel anzeigen (momentan wird nur der Username angezeigt)
+ */
 public class AboutGameActivity extends AppCompatActivity {
 
     TextView about_game_user_TV;

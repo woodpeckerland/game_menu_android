@@ -8,6 +8,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * zeigt in Zukunft die Startseite eines Spielvorgangs an
+ */
 public class StartGameActivity extends AppCompatActivity {
 
     @Override

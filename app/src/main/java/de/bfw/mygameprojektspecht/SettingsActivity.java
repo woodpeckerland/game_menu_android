@@ -11,6 +11,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * zeigt die Einstellungen des Spiels an
+ */
 public class SettingsActivity extends AppCompatActivity {
 
     TextView settings_user_TV;

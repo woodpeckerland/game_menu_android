@@ -15,6 +15,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * zeigt die besten fünf Spieler nach erreichten Punkten und Level sortiert an
+ */
 public class HighscoresActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button highscores_start_game_BTN;
@@ -63,7 +66,7 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
             tableLayout.addView(tableRow);
         }
 
-        // Buttons
+        // --> StartGameView
         highscores_start_game_BTN = findViewById(R.id.highscores_start_game_BTN);
         highscores_start_game_BTN.setOnClickListener(this);
 

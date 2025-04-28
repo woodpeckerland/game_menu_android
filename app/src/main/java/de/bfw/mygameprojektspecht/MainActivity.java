@@ -11,6 +11,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * zeigt das Menü der App über diverse Buttons an
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button my_game_start_game_BTN, my_game_highscores_BTN, my_game_settings_BTN, my_game_about_game_BTN;
@@ -22,16 +25,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Buttons
+        // Buttons:
+        // --> StartGameView
         my_game_start_game_BTN = findViewById(R.id.my_game_start_game_BTN);
         my_game_start_game_BTN.setOnClickListener(this);
 
+        // --> HighscoresView
         my_game_highscores_BTN = findViewById(R.id.my_game_highscores_BTN);
         my_game_highscores_BTN.setOnClickListener(this);
 
+        // --> SettingsView
         my_game_settings_BTN = findViewById(R.id.my_game_settings_BTN);
         my_game_settings_BTN.setOnClickListener(this);
 
+        // --> AboutGameView
         my_game_about_game_BTN = findViewById(R.id.my_game_about_game_BTN);
         my_game_about_game_BTN.setOnClickListener(this);
 
