@@ -26,9 +26,11 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_highscores);
 
+        // Table
         TableLayout tableLayout = findViewById(R.id.highscores_table);
         int btnColor = getResources().getColor(R.color.btn);
 
+        // Rows
         for (int i = 0; i < 5; i++) {
             TableRow tableRow = new TableRow(this);
             tableRow.setBackgroundResource(R.drawable.text_background);
@@ -38,9 +40,10 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
             params.setMargins(0, 0, 0, 48);
             tableRow.setLayoutParams(params);
 
+            // Columns
             for (int j = 0; j < 4; j++) {
                 TextView textView = new TextView(this);
-                textView.setText("Wert");
+                textView.setText("Parameter");
                 textView.setTextSize(16);
 
                 if (j == 0) {
@@ -70,8 +73,6 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
             return insets;
         });
     }
-
-
 
     @Override
     public void onClick(View v) {
