@@ -35,6 +35,9 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
 
         // Rows
         for (int i = 0; i < 5; i++) {
+
+            int position = i + 1;
+
             TableRow tableRow = new TableRow(this);
             tableRow.setBackgroundResource(R.drawable.text_background);
             tableRow.setPadding(30, 30, 30, 30);
@@ -45,17 +48,27 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
 
             // Columns
             for (int j = 0; j < 4; j++) {
+
                 TextView textView = new TextView(this);
-                textView.setText("Parameter");
                 textView.setTextSize(16);
 
                 if (j == 0) {
                     textView.setTypeface(null, Typeface.BOLD);
+                    textView.setText(String.valueOf(position));
                     textView.setTextColor(btnColor);
                 }
 
                 if (j == 1) {
                     textView.setTypeface(null, Typeface.BOLD);
+                    textView.setText("Peter");
+                }
+
+                if (j == 2) {
+                    textView.setText("Level 3");
+                }
+
+                if (j == 3) {
+                    textView.setText("143 Pkte.");
                 }
 
                 TableRow.LayoutParams textParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);

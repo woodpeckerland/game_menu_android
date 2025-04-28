@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         else if (v.getId() == log_reg_LINK.getId()) {
 
             if (!first_run) {
-                Toast.makeText(getApplicationContext(), "Benutzer ist bereits registriert", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Du bist bereits registriert", Toast.LENGTH_LONG).show();
             }
 
             else {

@@ -52,4 +52,9 @@
     <string name="spielen">Spielen</string>
     <string name="sieger">Sieger</string>
 
+    // HighscoresActivity.java
+    <string name="name_highscores">Peter</string>
+    <string name="level_highscores">Level 3</string>
+    <string name="points_highscores">143 Pkte.</string>
+
 </resources>
