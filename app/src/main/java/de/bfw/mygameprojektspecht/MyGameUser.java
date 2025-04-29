@@ -1,10 +1,10 @@
 package de.bfw.mygameprojektspecht;
 
-/**
- * zeigt in Zukunft einen kurzen Steckbrief des Users an
- */
-public class MyGameUser {
+import java.io.Serializable;
 
+public class MyGameUser implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String name;
     private String password;
     private int level;

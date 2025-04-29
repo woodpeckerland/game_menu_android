@@ -1,6 +1,8 @@
 package de.bfw.mygameprojektspecht;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +18,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 /**
- * zeigt die besten fünf Spieler nach erreichten Punkten und Level sortiert an
+ * zeigt die besten fünf Spieler sortiert in folgender Reihenfolge an: Level, Punkte, Name
  */
 public class HighscoresActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,6 +29,7 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        SharedPreferences preferences = getSharedPreferences("myPreferences", Context.MODE_PRIVATE);
         setContentView(R.layout.activity_highscores);
 
         // Table
@@ -36,7 +39,10 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
         // Rows
         for (int i = 0; i < 5; i++) {
 
+            String user = preferences.getString("name", "Name");
             int position = i + 1;
+            int level = preferences.getInt("level", 0);
+            int score = preferences.getInt("score", 0);
 
             TableRow tableRow = new TableRow(this);
             tableRow.setBackgroundResource(R.drawable.text_background);
@@ -52,23 +58,25 @@ public class HighscoresActivity extends AppCompatActivity implements View.OnClic
                 TextView textView = new TextView(this);
                 textView.setTextSize(16);
 
-                if (j == 0) {
-                    textView.setTypeface(null, Typeface.BOLD);
-                    textView.setText(String.valueOf(position));
-                    textView.setTextColor(btnColor);
-                }
+                switch (j) {
+                    case 0:
+                        textView.setTypeface(null, Typeface.BOLD);
+                        textView.setText(String.valueOf(position));
+                        textView.setTextColor(btnColor);
+                        break;
 
-                if (j == 1) {
-                    textView.setTypeface(null, Typeface.BOLD);
-                    textView.setText("Peter");
-                }
+                    case 1:
+                        textView.setTypeface(null, Typeface.BOLD);
+                        textView.setText(user);
+                        break;
 
-                if (j == 2) {
-                    textView.setText("Level 3");
-                }
+                    case 2:
+                        textView.setText("Level " + level);
+                        break;
 
-                if (j == 3) {
-                    textView.setText("143 Pkte.");
+                    case 3:
+                        textView.setText(score + " Pkte.");
+                        break;
                 }
 
                 TableRow.LayoutParams textParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);

@@ -37,8 +37,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         this.first_run = preferences.getBoolean("firstRunMyEmailClient", true);
 
         if (first_run) {
-            setContentView(R.layout.activity_register);
 
+            setContentView(R.layout.activity_register);
             name = preferences.getString("name", "Name");
 
             // EditTexts:
@@ -62,11 +62,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             // --> Login
             reg_login_BTN = findViewById(R.id.reg_login_BTN);
             reg_login_BTN.setOnClickListener(this);
-
-            // MyGameUser
-            String name = reg_password_ET.getText().toString();
-            String password = reg_password_ET.getText().toString();
-            MyGameUser user = new MyGameUser(name, password, 1, 0, false);
         }
 
         else {
@@ -100,16 +95,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
             else if (Objects.equals(password, confirm_password)) {
 
-                Intent intent = new Intent(this, LoginActivity.class);
+                Intent intentLogin = new Intent(this, LoginActivity.class);
                 SharedPreferences.Editor editor = preferences.edit();
 
                 editor.putBoolean("firstRunMyEmailClient", false);
                 editor.putString("name", name);
                 editor.putString("password", password);
                 editor.putString("confirm_password", confirm_password);
+                editor.putInt("level", 3);
+                editor.putInt("score", 143);
                 editor.apply();
 
-                startActivity(intent);
+                // MyGameUser
+                MyGameUser user = new MyGameUser(name, password, 0, 0, true);
+                startActivity(intentLogin);
             }
 
             // Fehlermeldung: Eingabefehler bei der Passwortbestätigung
