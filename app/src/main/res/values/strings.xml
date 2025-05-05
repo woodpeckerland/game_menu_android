@@ -51,10 +51,15 @@
     <string name="scoreFifth">54 Pkte.</string>
     <string name="spielen">Spielen</string>
     <string name="sieger">Sieger</string>
+    <string name="change_settings">Hier kannst du deine <b><u>Einstellungen ändern</u></b>.</string>
 
     // HighscoresActivity.java
     <string name="name_highscores">Peter</string>
     <string name="level_highscores">Level 3</string>
     <string name="points_highscores">143 Pkte.</string>
+
+    // change_settings.xml
+    <string name="title_change">Einstellungen</string>
+    <string name="btn_change">Änderungen speichern</string>
 
 </resources>
